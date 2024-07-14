@@ -1,0 +1,1391 @@
+body{
+    overflow-x: hidden;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration-line: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+:root{
+    --main-color: #fe2b00;
+    --second-color: #333333;
+    --third-color: #fae5bc;
+    --main-trans: 300ms;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: var(--main-trans);
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+#toUp{
+    color: black;
+    border-radius: 50%;
+    border: solid 1px black;
+    padding: 10px;
+    transition: var(--main-trans);
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    font-size: 20px;
+    z-index: 111111;
+    display: none;
+}
+
+#toUp:hover{
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+}
+
+/* start-nav */
+
+nav .container-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    border: solid 1px #00000042;
+    gap: 25px;
+}
+
+nav .container-all img{
+    width: 90px;
+    height: 30px;
+}
+
+nav .container-all #btnNav1{
+    background: #d9d9d940;
+    height: 100%;
+    padding: 0px 12px;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+nav .container-all #location{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+nav .container-all #location i{
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+nav .container-all #location p{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 160px;
+    gap: 4px;
+}
+
+nav .container-all #location p .sp-1{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .container-all #location p .sp-2{
+    color: #333333c7;
+    font-size: 11px;
+    white-space: pre;
+}
+
+nav .container-all form{
+    position: relative;
+    width: fit-content;
+}
+
+nav .container-all form input{
+    width: 340px;
+    height: 35px;
+    padding-left: 25px;
+    border-radius: 5px;
+    border: solid 1px #00000042;
+}
+
+nav .container-all form input:focus{
+    outline: none;
+}
+
+nav .container-all form input::placeholder{
+    font-size: 11px;
+}
+
+nav .container-all form button{
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    z-index: 111111;
+}
+
+nav .container-all form button i{
+    font-size: 15px;
+    color: #000000b0;
+}
+
+nav .container-all #Accunt{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+nav .container-all #Accunt i{
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+nav .container-all #Accunt p{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100px;
+    gap: 5px;
+}
+
+nav .container-all #Accunt p .sp-1{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .container-all #Accunt p .sp-2{
+    color: #333333c7;
+    font-size: 11px;
+}
+
+nav .container-all #cart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    background: #d9d9d940;
+    height: 100%;
+    padding: 0px 5px;
+}
+
+nav .container-all #cart i{
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+nav .container-all #cart p{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100px;
+    gap: 5px;
+}
+
+nav .container-all #cart p .sp-1{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .container-all #cart p .sp-2{
+    color: #333333c7;
+    font-size: 11px;
+}
+
+nav .container-all #contact{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    height: 265px;
+    display: none;
+    opacity: 0;
+    transition: var(--main-trans);
+    z-index: 11111111111;
+    box-shadow: 1px 1px 3px #0e0e0e, -1px -1px 3px #0e0e0e;
+}
+
+.classContact{
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+nav .container-all #contact #Close{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+nav .container-all #contact #Close i{
+    font-size: 25px;
+}
+
+nav .container-all #contact .left-container{
+    background-color: #fff3cd;
+    width: 155px;
+    border-radius: 8px 0px 0px 8px;
+    text-align: center;
+}
+
+nav .container-all #contact .left-container .image-container{
+    padding: 10px 0px 15px 0px
+}
+
+nav .container-all #contact .left-container img{
+    width: 50px;
+    height: 50px;
+}
+
+nav .container-all #contact .left-container .p-1{
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+nav .container-all #contact .left-container .p-2{
+    padding: 15px 0px;
+    font-size: 12px;
+    width: 100px;
+    margin: auto;
+    line-height: 16px;
+}
+
+nav .container-all #contact .left-container .p-2 span{
+    color: #00c100;
+    font-weight: 700;
+}
+
+nav .container-all #contact .left-container a{
+    font-size: 12px;
+    color: white;
+    background-color: #ffc107;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+nav .container-all #contact .right-container{
+    background-color: white;
+    border-radius: 0px 8px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 13px 0px 15px;
+}
+
+nav .container-all #contact .right-container input{
+    width: 255px;
+    height: 35px;
+}
+
+nav .container-all #contact .right-container .p-1{
+    font-size: 15px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+nav .container-all #contact .right-container .p-2{
+    font-size: 12px;
+    color: var(--second-color);
+    width: 150px;
+    line-height: 15px;
+}
+
+nav .container-all #contact .right-container .p-3{
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+nav .container-all #contact .right-container .sub{
+    background-color: var(--main-color);
+    color: white;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+nav .container-all #contact .right-container a{
+    color: var(--main-color);
+    border-bottom: solid 1px var(--main-color);
+    font-size: 10px;
+    padding-bottom: 1px;
+}
+
+/* end-nav */
+
+/* start-header */
+header{
+    width: 90%;
+    margin: auto;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header .first-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff3cd;
+    height: 12vh;
+    border-radius: 15px;
+    gap: 370px;
+}
+
+header .first-container img{
+width: 40px;
+height: 40px;
+}
+
+header .first-container .left-container{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+header .first-container p{
+    white-space: pre;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 17px;
+}
+
+header .first-container p span{
+    font-size: 11px;
+    font-weight: 100;
+    color: var(--second-color);
+}
+
+header .first-container a{
+    font-size: 15px;
+    color: white;
+    background-color: #ffc107;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+header .grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: 190px;
+    gap: 12px;
+}
+
+header .grid-container .box-1{
+    background-image: url(images/ad-banner-1.jpg);
+    background-size: cover;
+    background-position: right right;
+    border-radius: 8px;
+    transform: rotatey(180deg);
+}
+
+header .grid-container .box-1 .p-1{
+    color: #0d6efd;
+    font-size: 20px;
+    font-weight: 600;
+    width: 180px;
+}
+
+header .grid-container .box-1 .p-1 span{
+color: var(--second-color);
+}
+
+header .grid-container .box-1 .p-2{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+header .grid-container .box-1 .p-2 span{
+color: black;
+font-weight: 700;
+font-size: 15px;
+}
+
+header .grid-container .box-1 .p-3{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+header .grid-container .box-1 .p-3 span{
+    color: black;
+font-weight: 700;
+font-size: 15px;
+}
+
+header .grid-container .box-1 button{
+    background-color: #0d6efd;
+    color: white;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+header .grid-container .box-2{
+    background-image: url(images/ad-banner-2.jpg);
+    background-size: cover;
+    background-position: right right;
+    border-radius: 8px;
+    transform: rotatey(180deg);
+}
+
+header .grid-container .box-2 .p-1{
+    color: #fe3000;
+    font-size: 20px;
+    font-weight: 600;
+    width: 180px;
+}
+
+header .grid-container .box-2 .p-1 span{
+color: var(--second-color);
+}
+
+header .grid-container .box-2 .p-2{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+header .grid-container .box-2 .p-3{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+header .grid-container .box-2 button{
+    background-color: #fe3000;
+    color: white;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+header .grid-container .box-3{
+    background-image: url(images/ad-banner-3.jpg);
+    background-size: cover;
+    background-position: right right;
+    border-radius: 8px;
+    transform: rotatey(180deg);
+}
+
+header .grid-container .box-3 .p-1{
+    color: #198754;
+    font-size: 20px;
+    font-weight: 600;
+    width: 180px;
+}
+
+header .grid-container .box-3 .p-1 span{
+color: var(--second-color);
+}
+
+header .grid-container .box-3 .p-2{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+header .grid-container .box-3 .p-3{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+header .grid-container .box-3 button{
+    background-color: #198754;
+    color: white;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+header .grid-container > div .text{
+    transform: rotatey(-180deg);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+    position: relative;
+    z-index: 1111;
+}
+
+/* end-header */
+
+/* start-slider-products */
+.slider-products{
+    background-color: #eeeeee6b;
+    padding: 30px 0px;
+    transform: translateY(45px);
+}
+
+.slider-products img{
+    width: 60px;
+    height: 60px;
+}
+
+.slider-products .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.slider-products .text h1{
+    font-size: 16px;
+    color: var(--second-color);
+}
+
+.slider-products .text button{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.slider-products .products{
+    display: grid;
+    grid-template-columns: repeat(10,100px);
+    grid-template-rows: 100px;
+    gap: 12px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+.slider-products .products #btnSlid1{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+}
+
+.slider-products .products #btnSlid1 i{
+    font-size: 28px;
+}
+
+.slider-products .products #btnSlid2{
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+.slider-products .products #btnSlid2 i{
+    font-size: 28px;
+} 
+
+.slider-products .products > div{
+    text-align: center;
+}
+
+.slider-products .products > div p{
+    font-size: 12px;
+    color: var(--second-color);
+    font-family: cursive;
+}
+/* end-slider-products */
+
+/* start-section-1 */
+.section-1{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 75px;
+}
+
+.section-1 img{
+    width: 90px;
+    height: 90px;
+}
+
+.section-1 .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    gap: 20px;
+}
+
+.section-1 .text h2{
+    font-size: 16px;
+    color: var(--second-color);
+}
+
+.section-1 .text button{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.section-1 .grid-container{
+    display: grid;
+    grid-template-columns: repeat(6,140px);
+    grid-template-rows: repeat(2,140px);
+    gap: 10px;
+}
+
+.section-1 .grid-container > div{
+    border: solid 1px #00000038;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   gap: 5px;
+   border-radius: 5px;
+   transition: var(--main-trans);
+   cursor: pointer;
+}
+
+.section-1 .grid-container > div:hover{
+    border: solid 1px var(--main-color);
+}
+
+.section-1 .grid-container > div p{
+    font-size: 11px;
+    color: var(--second-color);
+}
+/* end-section-1 */
+
+/* start-section-2 */
+.section-2{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,430px);
+    grid-auto-rows: 140px;
+    justify-content: center;
+    gap: 28px;
+    margin: 0 auto;
+    padding-right: 13px;
+}
+
+.section-2 > div .txt{
+    transform: rotatey(-180deg);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+}
+
+.section-2 > div .txt button{
+    background-color: #fe3000;
+    color: white;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.section-2 .container-1{
+background-image: url("images/grocery-banner.png");
+background-size: cover;
+transform: rotatey(180deg);
+border-radius: 8px;
+}
+
+.section-2 .container-1 .txt .p-1{
+    color: var(--second-color);
+    font-size: 20px;
+}
+
+.section-2 .container-1 .txt .p-1 span{
+    font-weight: 600;
+}
+
+.section-2 .container-1 .txt .p-2{
+    font-size: 13px;
+}
+
+.section-2 .container-1 .txt .p-2 span{
+font-weight: 600;
+}
+
+.section-2 .container-2{
+background-image: url("images/grocery-banner-2.jpg");
+background-size: cover;
+transform: rotatey(180deg);
+border-radius: 8px;
+}
+
+.section-2 .container-2 .txt .p-1{
+    color: var(--second-color);
+    font-size: 20px;
+}
+
+.section-2 .container-2 .txt .p-1 span{
+    font-weight: 600;
+}
+
+.section-2 .container-2 .txt .p-2{
+    font-size: 13px;
+}
+
+.section-2 .container-2 .txt .p-2 span{
+    font-weight: 600;
+}
+/* end-section-2 */
+
+/* start-section-3 */
+.section-3{
+    background-color: #ffc107;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 180px;
+    margin-top: 40px;
+}
+
+.section-3 .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.section-3 .text h3{
+    font-size: 16px;
+    color: var(--second-color);
+}
+
+.section-3 .text button{
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.section-3 .grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,215px);
+    grid-template-rows: 70px;
+    gap: 15px;
+}
+
+.section-3 .grid-container > div{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.section-3 .grid-container > div .txt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section-3 .grid-container > div .p-1{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.section-3 .grid-container > div .p-2{
+    font-size: 10px;
+    color: var(--second-color);
+}
+
+.section-3 .grid-container > div i{
+    background: #00c100;
+    padding: 7px;
+    border-radius: 50%;
+    color: white;
+}
+/* end-section-3 */
+
+/* start-section-4 */
+.section-4{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.section-4 .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    gap: 20px;
+}
+
+.section-4 h4{
+    font-size: 16px;
+    color: var(--second-color);
+}
+
+.section-4 .text button{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.section-4 .grid-container{
+    display: grid;
+    grid-template-columns: repeat(6,145px);
+    grid-template-rows: 230px;
+    gap: 10px;
+}
+
+.section-4 .grid-container > div{
+    border: solid 1px #00000038;
+    padding-top: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.section-4 .grid-container .container-2::before{
+    content: '20% OFF';
+    background-color: #ffc107;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-4 .grid-container .container-4::before{
+    content: '25% OFF';
+    background-color: #0dcaf0;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-4 .grid-container .image-container{
+    text-align: center;
+    overflow: hidden;
+    perspective: 300px;
+}
+
+.section-4 .grid-container img{
+width: 100px;
+height: 100px;
+transition: var(--main-trans);
+}
+
+.section-4 .grid-container img:hover{
+    transform: translateZ(40px);
+}
+
+.section-4 .grid-container > div .text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.section-4 .grid-container > div .p-1{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+.section-4 .grid-container > div .p-2{
+    font-size: 12px;
+    font-weight: 700;
+    overflow-x: hidden;
+    width: 130px;
+    margin: auto;
+}
+
+.section-4 .grid-container > div button{
+    background-color: white;
+    color: #fe3000;
+    border: solid 1px #fe3000;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 0 auto;
+    transition: var(--main-trans);
+}
+
+.section-4 .grid-container > div button:hover{
+    background-color: #fe3000;
+    color: white;
+}
+
+/* end-section-4 */
+
+/* start-section-5 */
+.section-5{
+    padding-top: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-5 .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    gap: 20px;
+}
+
+.section-5 .text h5{
+    font-size: 16px;
+    color: var(--second-color);
+}
+
+.section-5 .text button{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.section-5 .grid-container{
+    display: grid;
+    grid-template-columns: repeat(6,145px);
+    grid-template-rows: 230px;
+    gap: 10px;
+}
+
+.section-5 .grid-container > div{
+    border: solid 1px #00000038;
+    padding-top: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.section-5 .grid-container .container-1::before{
+    content: '5% OFF';
+    background-color: red;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-5 .grid-container .container-3::before{
+    content: '10% OFF';
+    background-color: #0dcaf0;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-5 .grid-container .container-6::before{
+    content: '15% OFF';
+    background-color: #ffc107;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-5 .grid-container .image-container {
+    text-align: center;
+    overflow: hidden;
+    perspective: 300px;
+}
+
+.section-5 .grid-container img {
+    width: 100px;
+    height: 100px;
+    transition: var(--main-trans);
+}
+
+.section-5 .grid-container img:hover {
+    transform: translateZ(40px);
+}
+
+.section-5 .grid-container > div .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.section-5 .grid-container > div .p-1 {
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+.section-5 .grid-container > div .p-2 {
+    font-size: 12px;
+    font-weight: 700;
+    overflow-x: hidden;
+    width: 130px;
+    margin: auto;
+}
+
+.section-5 .grid-container > div button {
+    background-color: white;
+    color: #fe3000;
+    border: solid 1px #fe3000;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 0 auto;
+    transition: var(--main-trans);
+}
+
+.section-5 .grid-container > div button:hover {
+    background-color: #fe3000;
+    color: white;
+}
+/* end-section-5 */
+
+/* start-section-6 */
+.section-6{
+    padding-top: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-6 .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    gap: 20px;
+}
+
+.section-6 .text h6{
+    font-size: 16px;
+    color: var(--second-color);
+}
+
+.section-6 .text button{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.section-6 .grid-container{
+    display: grid;
+    grid-template-columns: repeat(6,145px);
+    grid-template-rows: 230px;
+    gap: 10px;
+}
+
+.section-6 .grid-container > div{
+    border: solid 1px #00000038;
+    padding-top: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.section-6 .grid-container .container-1::before{
+    content: '5% OFF';
+    background-color: red;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-6 .grid-container .container-2::before{
+    content: '10% OFF';
+    background-color: #0dcaf0;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-6 .grid-container .container-4::before{
+    content: '10% OFF';
+    background-color: #198754;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+
+.section-6 .grid-container .container-6::before{
+    content: '15% OFF';
+    background-color: #ffc107;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 11111;
+    padding: 3px;
+    border-radius: 0px 3px 3px 0px;
+    top: 10px;
+}
+
+.section-6 .grid-container .image-container {
+    text-align: center;
+    overflow: hidden;
+    perspective: 300px;
+}
+
+.section-6 .grid-container img {
+    width: 100px;
+    height: 100px;
+    transition: var(--main-trans);
+}
+
+.section-6 .grid-container img:hover {
+    transform: translateZ(40px);
+}
+
+.section-6 .grid-container > div .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.section-6 .grid-container > div .p-1 {
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+.section-6 .grid-container > div .p-2 {
+    font-size: 12px;
+    font-weight: 700;
+    overflow-x: hidden;
+    width: 130px;
+    margin: auto;
+}
+
+.section-6 .grid-container > div button {
+    background-color: white;
+    color: #fe3000;
+    border: solid 1px #fe3000;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 0 auto;
+    transition: var(--main-trans);
+}
+
+.section-6 .grid-container > div button:hover {
+    background-color: #fe3000;
+    color: white;
+}
+/* end-section-6 */
+
+
+/* start-section-7 */
+ .section-7{
+    padding-top: 60px;
+    position: relative;
+    top: 50px;
+    background: #eee;
+ }
+
+ .section-7::before{
+     content: '';
+     background-color: #00000038;
+     height: 1px;
+     width: 100%;
+     position:absolute;
+     top: 0;
+ }
+
+ .section-7 .grid-container{
+     width: 90%;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(4,180px);
+     grid-template-rows: 200px;
+     justify-content: center;
+     gap: 45px;
+ }
+
+ .section-7 .grid-container > div{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     text-align: center;
+ }
+
+ .section-7 .grid-container > div i{
+font-size: 30px;
+color: var(--main-color);
+ }
+
+ .section-7 .grid-container > div .p-1{
+    font-size: 16px;
+    font-weight: 600;
+ }
+
+ .section-7 .grid-container > div .p-2{
+    font-size: 13px;
+    text-align: center;
+    color: var(--second-color);
+ }
+
+ .section-7 .grid-container > div .p-2 span{
+     color: var(--main-color);
+ }
+/* end-section-7 */
+
+/* start-footer */
+footer{
+    padding-top: 90px;
+}
+
+footer .first-container{
+    display: grid;
+    grid-template-columns: repeat(6,150px);
+    grid-template-rows: 200px;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .first-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+footer .first-container ul li {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+footer .first-container ul li a{
+    font-size: 12px;
+    color: var(--second-color);
+    transition: var(--main-trans);
+}
+
+footer .first-container ul li a:hover{
+    color: var(--main-color);
+}
+
+footer .center-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    background: #eee;
+    margin-top: 30px;
+    height: 80px;
+}
+
+footer .center-container .left-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .center-container .left-container p{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+footer .center-container .left-container .cridets{
+    display: flex;
+    align-items: center;
+}
+
+footer .center-container .left-container img{
+width: 40px;
+height: 30px;
+}
+
+footer .center-container .right-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .center-container .right-container img{
+    width: 60px;
+    height: 60px;
+}
+
+footer .center-container .right-container p{
+    font-size: 12px;
+    color: var(--second-color);
+}
+
+footer .last-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    height: 55px;
+}
+
+footer .last-container > p{
+    font-size: 13px;
+    color: var(--second-color);
+}
+
+footer .last-container div{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+footer .last-container div p{
+    font-size: 15px;
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+footer .last-container div i{
+border-radius: 50%;
+padding: 10px;
+border: solid 1px  var(--second-color);
+color: black;
+transition: var(--main-trans);
+}
+
+footer .last-container div i:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+/* end-footer */
